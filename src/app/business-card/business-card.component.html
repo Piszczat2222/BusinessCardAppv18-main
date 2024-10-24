@@ -16,6 +16,11 @@
             }
         </ul>
     </div> -->
+
+    <p>Jest {{ students.length | i18nPlural: studentMapping}}</p>
+    <ul>
+        <li *ngFor="let student of students">{{student}}</li>
+    </ul>
     <app-manage-interests [interestList]="interests" [selected]="selected" (selectInterestInParent)="selectInterest($event)"></app-manage-interests>
     @if (selected>-1) {
         

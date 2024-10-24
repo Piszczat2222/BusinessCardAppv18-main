@@ -18,6 +18,13 @@ export class BusinessCardComponent {
   interests: string[];
   selected:number=-1;
   previousInterest: string = '';
+  students: string[] = ['Patryk Piszczatowski', 'Mateusz Zawadzki', 'Kacper Przemielewski'];
+
+  studentMapping: {[k: string]: string}={
+    '=0': 'Brak studentów',
+    '=1': '1 student',
+    'other': '# studentów'
+  }
 
   constructor() { 
     this.name = 'Joanna';
